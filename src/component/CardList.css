@@ -1,0 +1,74 @@
+.cardlist-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+/* Title spans across the grid */
+.cardlist-list-title {
+  grid-column: 1 / -1;
+  margin-bottom: 12px;
+}
+
+/* Card keeps your style, but now supports internal scroll */
+.cardlist {
+  background: #ffe;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 16px;
+  margin: 12px;
+  width: 300px;
+  height: 350px;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* important for scroll inside */
+  transition: transform 0.2s ease-in-out;
+}
+
+.cardlist:hover {
+  transform: translateY(-5px);
+}
+
+.cardlist-title {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+/* 👇 make list scroll inside card */
+.cardlist-content {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+
+  flex: 1;            /* take remaining vertical space */
+  overflow-y: auto;   /* enable scrolling inside */
+  min-height: 0;      /* required for flex children */
+}
+
+.cardlist-content li {
+  padding: 4px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cardlist-content li:last-child {
+  border-bottom: none;
+}
+
+/* Optional: style the scrollbar */
+.cardlist-content::-webkit-scrollbar {
+  width: 6px;
+}
+.cardlist-content::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+.cardlist-content::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}

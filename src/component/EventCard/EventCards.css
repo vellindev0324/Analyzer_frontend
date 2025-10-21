@@ -1,0 +1,58 @@
+.event-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin: 20px;
+}
+
+.cardevent {
+  background: #ffe;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 16px;
+  margin: 12px;
+  width: 300px;
+  height: 350px; 
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out;
+}
+
+.cardevent:hover {
+  transform: translateY(-5px);
+}
+
+.cardevent-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.cardevent-content {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cardevent-content li {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+}
+
+.cardevent-content li:last-child {
+  border-bottom: none;
+}
+
+.name {
+  font-weight: 500;
+  color: #222;
+}
+
+.date {
+  color: #555;
+  font-size: 0.9rem;
+}

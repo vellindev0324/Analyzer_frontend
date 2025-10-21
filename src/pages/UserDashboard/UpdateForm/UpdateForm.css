@@ -1,0 +1,124 @@
+/* Container */
+.update-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #f8fafc;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  width: 360px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box; /* 🔹 add this */
+}
+
+/* Keyword Input */
+.update-input {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box; /* 🔹 important */
+}
+
+.update-input:focus {
+  border-color: #4f46e5; /* deep purple */
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+  outline: none;
+}
+
+/* Vertical List */
+.update-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #ddd;
+}
+
+/* List Items */
+.update-list-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #eee;
+}
+
+.update-list-item:last-child {
+  border-bottom: none;
+}
+
+.update-list-item:hover {
+  background-color: #e0e7ff; /* soft purple highlight */
+  transform: translateX(3px);
+}
+
+.update-list-item.selected {
+  background-color: #4f46e5; /* deep purple */
+  color: white;
+  font-weight: 600;
+}
+
+/* Scrollbar styling for list */
+.update-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.update-list::-webkit-scrollbar-thumb {
+  background: #a5b4fc;
+  border-radius: 4px;
+}
+
+.update-list::-webkit-scrollbar-thumb:hover {
+  background: #818cf8;
+}
+
+
+.update-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* space between button and Updated */
+  margin-top: 10px;
+}
+
+.update-submit {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.update-submit:hover {
+  background-color: #0056b3;
+}
+
+.update-success {
+  color: green;
+  font-weight: bold;
+  opacity: 1;
+  animation: fadeOut 2s forwards;
+}
+
+.update-failed {
+  color: red;
+  font-weight: bold;
+  opacity: 1;
+  animation: fadeOut 2s forwards;
+}
+
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; }
+}
